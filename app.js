@@ -4,8 +4,8 @@ $(document).ready(function()
     init()
 
 
-    function highest(myArguments){ 
-        return myArguments.sort(function(a,b)
+    function highest(myParamter){ 
+        return myParamter.sort(function(a,b)
         { 
           return b - a; 
         }); 
