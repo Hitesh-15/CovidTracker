@@ -27,6 +27,7 @@ $(document).ready(function()
             for(i=0;i<186;i++)
             {
                 output[i]=data.Countries[i].TotalDeaths;
+           
             }
             console.log(highest(output));
             console.log("Highest: "+output[0])
@@ -44,6 +45,7 @@ $(document).ready(function()
             <td>${data.Countries[177].TotalDeaths}</td>
             <td>${data.Countries[177].TotalRecovered}</td>
             `
+            $("#red").css("color","red")
             $("#totaldata").html(totaldata)
             $("#countrydata").html(countrydata)
         })
