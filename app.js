@@ -15,6 +15,13 @@ $(document).ready(function()
         var data='';
         $.get(url, function(data)
         {
+            // console.log(data);
+            // console.log(data.Countries[177]);
+            // console.log(data.Countries[177].Country);
+            // console.log(data.Countries[177].TotalConfirmed);
+            // console.log(data.Countries[177].TotalDeaths);
+            // console.log(data.Countries[177].TotalRecovered);
+            
             var i;
             var output=new Array()
             
@@ -24,16 +31,25 @@ $(document).ready(function()
                 output[i]=data.Countries[i].TotalConfirmed;
                 
             }
+            // console.log("Sorted in highest country: "+highest(output));
             highest(output)
             var HighestCountryByTotal=new Array();
             for(i=0;i<178;i++)
             {
+                // console.log(output[0])
                 if(output[0]==data.Countries[i].TotalConfirmed)
                 {
                     HighestCountryByTotal[i]=data.Countries[i].Country;
                     console.log(HighestCountryByTotal[i])
                 }
-            }
+            }    
+            // highestnumber=output[0]
+            // console.log("Highest Country: "+output[0])
+            // if(highestnumber==data.Countries[177].TotalDeaths)
+            // {
+            //     console.log("checks"+data.Countries[177].Country);
+            // }
+            
 
             totaldata=
             `
