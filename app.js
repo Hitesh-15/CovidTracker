@@ -15,22 +15,25 @@ $(document).ready(function()
         var data='';
         $.get(url, function(data)
         {
-            console.log(data);
-            console.log(data.Countries[177]);
-            // console.log(data.Countries[177].Country);
-            // console.log(data.Countries[177].TotalConfirmed);
-            // console.log(data.Countries[177].TotalDeaths);
-            // console.log(data.Countries[177].TotalRecovered);
-            
             var i;
             var output=new Array()
+            
+            let highestnumber
             for(i=0;i<186;i++)
             {
-                output[i]=data.Countries[i].TotalDeaths;
-           
+                output[i]=data.Countries[i].TotalConfirmed;
+                
             }
-            console.log(highest(output));
-            console.log("Highest: "+output[0])
+            highest(output)
+            var HighestCountryByTotal=new Array();
+            for(i=0;i<178;i++)
+            {
+                if(output[0]==data.Countries[i].TotalConfirmed)
+                {
+                    HighestCountryByTotal[i]=data.Countries[i].Country;
+                    console.log(HighestCountryByTotal[i])
+                }
+            }
 
             totaldata=
             `
