@@ -40,24 +40,24 @@ $(document).ready(function()
             for(i=0;i<186;i++)
             {
                 for(j=0;j<186;j++)
-                {// console.log(output[0])
-                if(output[i]==data.Countries[j].TotalConfirmed)
                 {
-                    HighestCountryByTotal[i]=data.Countries[j].Country;
-                    HighestCountryByConfirmed[i]=data.Countries[j].TotalConfirmed;
-                    HighestCountryByDeath[i]=data.Countries[j].TotalDeaths;
-                    HighestCountryByRecovered[i]=data.Countries[j].TotalRecovered;
-                    // console.log(HighestCountryByTotal[i]+" "+HighestCountryByConfirmed[i]+" "+HighestCountryByDeath[i]+" "+HighestCountryByRecovered[i])
-                    // $("#countryvalue").append(HighestCountryByTotal[i]);
-                    // $("#totalvalue").append(HighestCountryByConfirmed[i]);
-                    // $("#deathvalue").append(HighestCountryByDeath[i]);
-                    // $("#recoveredvalue").append(HighestCountryByRecovered[i]);
-                    $("#countryvalue").append('<tr><th>'+HighestCountryByTotal[i]+'</th></tr>')
-                    $("#totalvalue").append('<tr><th>'+HighestCountryByConfirmed[i]+'</th></tr>')
-                    $("#deathvalue").append('<tr><th>'+HighestCountryByDeath[i]+'</th></tr>')
-                    $("#recoveredvalue").append('<tr><th>'+HighestCountryByRecovered[i]+'</th></tr>')
+                    if(output[i]==data.Countries[j].TotalConfirmed)
+                    {
+                        HighestCountryByTotal[i]=data.Countries[j].Country;
+                        HighestCountryByConfirmed[i]=data.Countries[j].TotalConfirmed;
+                        HighestCountryByDeath[i]=data.Countries[j].TotalDeaths;
+                        HighestCountryByRecovered[i]=data.Countries[j].TotalRecovered;
+                        // console.log(HighestCountryByTotal[i]+" "+HighestCountryByConfirmed[i]+" "+HighestCountryByDeath[i]+" "+HighestCountryByRecovered[i])
+                        // $("#countryvalue").append(HighestCountryByTotal[i]);
+                        // $("#totalvalue").append(HighestCountryByConfirmed[i]);
+                        // $("#deathvalue").append(HighestCountryByDeath[i]);
+                        // $("#recoveredvalue").append(HighestCountryByRecovered[i]);
+                        $("#countryvalue").append('<table class = "table table-hover text-center"><tr><th>'+HighestCountryByTotal[i]+'</th></tr></table>')
+                        $("#totalvalue").append('<table class = "table table-hover text-center"><tr><th>'+HighestCountryByConfirmed[i]+'</th></tr></table>')
+                        $("#deathvalue").append('<table class = "table table-hover text-center"><tr><th>'+HighestCountryByDeath[i]+'</th></tr></table>')
+                        $("#recoveredvalue").append('<table class = "table table-hover text-center"><tr><th>'+HighestCountryByRecovered[i]+'</th></tr></table>')
+                    }
                 }
-            }
             }    
             // highestnumber=output[0]
             // console.log("Highest Country: "+output[0])
@@ -73,14 +73,14 @@ $(document).ready(function()
             <td>${data.Global.TotalDeaths}</td>
             <td>${data.Global.TotalRecovered}</td>
             `
-            countrydata=
-            `
-            <td>${data.Countries[177].Country}</td>
-            <td>${data.Countries[177].TotalConfirmed}</td>
-            <td>${data.Countries[177].TotalDeaths}</td>
-            <td>${data.Countries[177].TotalRecovered}</td>
-            `
-            $("#red").css("color","red")
+            // countrydata=
+            // `
+            // <td>${data.Countries[177].Country}</td>
+            // <td>${data.Countries[177].TotalConfirmed}</td>
+            // <td>${data.Countries[177].TotalDeaths}</td>
+            // <td>${data.Countries[177].TotalRecovered}</td>
+            // `
+            // $("#red").css("color","red")
             $("#totaldata").html(totaldata)
             // $("#countrydata").html(countrydata)
         })
