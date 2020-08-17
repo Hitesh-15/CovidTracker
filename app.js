@@ -22,7 +22,7 @@ $(document).ready(function()
             // console.log(data.Countries[177].TotalDeaths);
             // console.log(data.Countries[177].TotalRecovered);
             
-            var i;
+            var i,j;
             var output=new Array()
             
             let highestnumber
@@ -34,13 +34,21 @@ $(document).ready(function()
             // console.log("Sorted in highest country: "+highest(output));
             highest(output)
             var HighestCountryByTotal=new Array();
-            for(i=0;i<178;i++)
+            var HighestCountryByConfirmed=new Array();
+            var HighestCountryByDeath=new Array();
+            var HighestCountryByRecovered=new Array();
+            for(i=0;i<186;i++)
             {
+                for(j=0;j<186;j++)
                 // console.log(output[0])
-                if(output[0]==data.Countries[i].TotalConfirmed)
+                if(output[i]==data.Countries[j].TotalConfirmed)
                 {
-                    HighestCountryByTotal[i]=data.Countries[i].Country;
-                    console.log(HighestCountryByTotal[i])
+                    HighestCountryByTotal[i]=data.Countries[j].Country;
+                    HighestCountryByConfirmed[i]=data.Countries[j].TotalConfirmed;
+                    HighestCountryByDeath[i]=data.Countries[j].TotalDeaths;
+                    HighestCountryByRecovered[i]=data.Countries[j].TotalRecovered;
+                    console.log(HighestCountryByTotal[i]+" "+HighestCountryByConfirmed[i]+" "+HighestCountryByDeath[i]+" "+HighestCountryByRecovered[i])
+                    
                 }
             }    
             // highestnumber=output[0]
