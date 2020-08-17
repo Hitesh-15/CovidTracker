@@ -40,16 +40,24 @@ $(document).ready(function()
             for(i=0;i<186;i++)
             {
                 for(j=0;j<186;j++)
-                // console.log(output[0])
+                {// console.log(output[0])
                 if(output[i]==data.Countries[j].TotalConfirmed)
                 {
                     HighestCountryByTotal[i]=data.Countries[j].Country;
                     HighestCountryByConfirmed[i]=data.Countries[j].TotalConfirmed;
                     HighestCountryByDeath[i]=data.Countries[j].TotalDeaths;
                     HighestCountryByRecovered[i]=data.Countries[j].TotalRecovered;
-                    console.log(HighestCountryByTotal[i]+" "+HighestCountryByConfirmed[i]+" "+HighestCountryByDeath[i]+" "+HighestCountryByRecovered[i])
-                    
+                    // console.log(HighestCountryByTotal[i]+" "+HighestCountryByConfirmed[i]+" "+HighestCountryByDeath[i]+" "+HighestCountryByRecovered[i])
+                    // $("#countryvalue").append(HighestCountryByTotal[i]);
+                    // $("#totalvalue").append(HighestCountryByConfirmed[i]);
+                    // $("#deathvalue").append(HighestCountryByDeath[i]);
+                    // $("#recoveredvalue").append(HighestCountryByRecovered[i]);
+                    $("#countryvalue").append('<tr><th>'+HighestCountryByTotal[i]+'</th></tr>')
+                    $("#totalvalue").append('<tr><th>'+HighestCountryByConfirmed[i]+'</th></tr>')
+                    $("#deathvalue").append('<tr><th>'+HighestCountryByDeath[i]+'</th></tr>')
+                    $("#recoveredvalue").append('<tr><th>'+HighestCountryByRecovered[i]+'</th></tr>')
                 }
+            }
             }    
             // highestnumber=output[0]
             // console.log("Highest Country: "+output[0])
@@ -74,7 +82,7 @@ $(document).ready(function()
             `
             $("#red").css("color","red")
             $("#totaldata").html(totaldata)
-            $("#countrydata").html(countrydata)
+            // $("#countrydata").html(countrydata)
         })
     }
 })
