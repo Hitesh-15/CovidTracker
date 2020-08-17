@@ -15,13 +15,6 @@ $(document).ready(function()
         var data='';
         $.get(url, function(data)
         {
-            // console.log(data);
-            // console.log(data.Countries[177]);
-            // console.log(data.Countries[177].Country);
-            // console.log(data.Countries[177].TotalConfirmed);
-            // console.log(data.Countries[177].TotalDeaths);
-            // console.log(data.Countries[177].TotalRecovered);
-            
             var i,j;
             var output=new Array()
             
@@ -31,7 +24,6 @@ $(document).ready(function()
                 output[i]=data.Countries[i].TotalConfirmed;
                 
             }
-            // console.log("Sorted in highest country: "+highest(output));
             highest(output)
             var HighestCountryByTotal=new Array();
             var HighestCountryByConfirmed=new Array();
@@ -47,42 +39,20 @@ $(document).ready(function()
                         HighestCountryByConfirmed[i]=data.Countries[j].TotalConfirmed;
                         HighestCountryByDeath[i]=data.Countries[j].TotalDeaths;
                         HighestCountryByRecovered[i]=data.Countries[j].TotalRecovered;
-                        // console.log(HighestCountryByTotal[i]+" "+HighestCountryByConfirmed[i]+" "+HighestCountryByDeath[i]+" "+HighestCountryByRecovered[i])
-                        // $("#countryvalue").append(HighestCountryByTotal[i]);
-                        // $("#totalvalue").append(HighestCountryByConfirmed[i]);
-                        // $("#deathvalue").append(HighestCountryByDeath[i]);
-                        // $("#recoveredvalue").append(HighestCountryByRecovered[i]);
                         $("#countryvalue").append('<table class = "table table-hover text-center"><tr><th>'+HighestCountryByTotal[i]+'</th></tr></table>')
                         $("#totalvalue").append('<table class = "table table-hover text-center"><tr><th>'+HighestCountryByConfirmed[i]+'</th></tr></table>')
                         $("#deathvalue").append('<table class = "table table-hover text-center"><tr><th>'+HighestCountryByDeath[i]+'</th></tr></table>')
                         $("#recoveredvalue").append('<table class = "table table-hover text-center"><tr><th>'+HighestCountryByRecovered[i]+'</th></tr></table>')
                     }
                 }
-            }    
-            // highestnumber=output[0]
-            // console.log("Highest Country: "+output[0])
-            // if(highestnumber==data.Countries[177].TotalDeaths)
-            // {
-            //     console.log("checks"+data.Countries[177].Country);
-            // }
-            
-
+            } 
             totaldata=
             `
             <td>${data.Global.TotalConfirmed}</td>
             <td>${data.Global.TotalDeaths}</td>
             <td>${data.Global.TotalRecovered}</td>
             `
-            // countrydata=
-            // `
-            // <td>${data.Countries[177].Country}</td>
-            // <td>${data.Countries[177].TotalConfirmed}</td>
-            // <td>${data.Countries[177].TotalDeaths}</td>
-            // <td>${data.Countries[177].TotalRecovered}</td>
-            // `
-            // $("#red").css("color","red")
             $("#totaldata").html(totaldata)
-            // $("#countrydata").html(countrydata)
         })
     }
 })

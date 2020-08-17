@@ -1,0 +1,45 @@
+.footer-area {
+    padding: 20px;
+    background-color: #252525;
+    text-align: center;
+    color: #ffffff;
+}
+
+        .footer-area i:hover {
+            color: #c32aa3;
+        }
+        .footer-area c:hover {
+            color: #0082c9;
+        }
+        
+        .footer-area t:hover {
+            color: #1dcaff;
+        }
+        .footer-area f:hover {
+            color: #3B5998;
+        }
+        .footer-area l:hover {
+            color: #4875B4;
+        }
+    .footer-area e:hover {
+        color: #606060;
+    }
+
+.footer-social-widget {
+    margin-top: 30px;
+}
+
+.footer-social-widget > a {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-right: 30px;
+}
+
+.footer-social-widget > a:hover,
+.footer-social-widget > a:focus {
+    color: rgba(255, 255, 255, 1);
+}
+
+.footer-social-widget > a:last-child {
+    margin-right: 0;
+}
