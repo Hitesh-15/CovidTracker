@@ -15,7 +15,7 @@ $(document).ready(function()
         var data='';
         $.get(url, function(data)
         {
-            var i;
+            var i,j;
             var output=new Array()
             
             let highestnumber
@@ -26,31 +26,33 @@ $(document).ready(function()
             }
             highest(output)
             var HighestCountryByTotal=new Array();
-            for(i=0;i<178;i++)
+            var HighestCountryByConfirmed=new Array();
+            var HighestCountryByDeath=new Array();
+            var HighestCountryByRecovered=new Array();
+            for(i=0;i<186;i++)
             {
-                if(output[0]==data.Countries[i].TotalConfirmed)
+                for(j=0;j<186;j++)
                 {
-                    HighestCountryByTotal[i]=data.Countries[i].Country;
-                    console.log(HighestCountryByTotal[i])
+                    if(output[i]==data.Countries[j].TotalConfirmed)
+                    {
+                        HighestCountryByTotal[i]=data.Countries[j].Country;
+                        HighestCountryByConfirmed[i]=data.Countries[j].TotalConfirmed;
+                        HighestCountryByDeath[i]=data.Countries[j].TotalDeaths;
+                        HighestCountryByRecovered[i]=data.Countries[j].TotalRecovered;
+                        $("#countryvalue").append('<table class = "table table-hover text-center"><tr><th>'+HighestCountryByTotal[i]+'</th></tr></table>')
+                        $("#totalvalue").append('<table class = "table table-hover text-center"><tr><th>'+HighestCountryByConfirmed[i]+'</th></tr></table>')
+                        $("#deathvalue").append('<table class = "table table-hover text-center"><tr><th>'+HighestCountryByDeath[i]+'</th></tr></table>')
+                        $("#recoveredvalue").append('<table class = "table table-hover text-center"><tr><th>'+HighestCountryByRecovered[i]+'</th></tr></table>')
+                    }
                 }
-            }
-
+            } 
             totaldata=
             `
             <td>${data.Global.TotalConfirmed}</td>
             <td>${data.Global.TotalDeaths}</td>
             <td>${data.Global.TotalRecovered}</td>
             `
-            countrydata=
-            `
-            <td>${data.Countries[177].Country}</td>
-            <td>${data.Countries[177].TotalConfirmed}</td>
-            <td>${data.Countries[177].TotalDeaths}</td>
-            <td>${data.Countries[177].TotalRecovered}</td>
-            `
-            $("#red").css("color","red")
             $("#totaldata").html(totaldata)
-            $("#countrydata").html(countrydata)
         })
     }
 })
