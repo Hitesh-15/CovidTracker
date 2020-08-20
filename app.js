@@ -87,21 +87,22 @@ $(document).ready(function()
             <td>${data.Global.TotalDeaths}</td>
             <td>${data.Global.TotalRecovered}</td>
             `
-            totalcases=`${data.Global.TotalConfirmed}`
-            totaldeaths=`${data.Global.TotalDeaths}`
-            totalrecovered=`${data.Global.TotalRecovered}`
-            // countrydata=
-            // `
-            // <td>${data.Countries[177].Country}</td>
-            // <td>${data.Countries[177].TotalConfirmed}</td>
-            // <td>${data.Countries[177].TotalDeaths}</td>
-            // <td>${data.Countries[177].TotalRecovered}</td>
-            // `
+            // totalcases=`${data.Global.TotalConfirmed}`
+            // totaldeaths=`${data.Global.TotalDeaths}`
+            // totalrecovered=`${data.Global.TotalRecovered}`
+
+            countrydata=
+            `
+            <td>${data.Countries[177].Country}</td>
+            <td>${data.Countries[177].TotalConfirmed}</td>
+            <td>${data.Countries[177].TotalDeaths}</td>
+            <td>${data.Countries[177].TotalRecovered}</td>
+            `
             // $("#red").css("color","red")
             $("#totaldata").html(totaldata)
-            $("#totalcases").html(totalcases)
-            $("#totaldeaths").html(totaldeaths)
-            $("#totalrecovered").html(totalrecovered)
+            // $("#totalcases").html(totalcases)
+            // $("#totaldeaths").html(totaldeaths)
+            // $("#totalrecovered").html(totalrecovered)
             // $("#countrydata").html(countrydata)
         })
     }
