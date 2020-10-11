@@ -1,4 +1,5 @@
 
+//countdown start
 
 var countDownDateTime = new Date("Dec 31, 2020 23:59:59").getTime();
 
@@ -7,13 +8,19 @@ var interval = setInterval(function() {
   var nowTime = new Date().getTime();
     
   var difference = countDownDateTime - nowTime;
+
+  const second = 1000,
+        minute = second * 60,
+        hour = minute * 60,
+        day = hour * 24;
+
     
-  var days = Math.floor(difference / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((difference % (1000 * 60)) / 1000);
+  var days = Math.floor(difference / (day));
+  var hours = Math.floor((difference % day) / (hour));
+  var minutes = Math.floor((difference % (hour)) / (minute));
+  var seconds = Math.floor((difference % (minute)) / second);
     
-  document.getElementById("countdown").innerHTML = "Countdown Q4 2020: " + days + "d " + hours + "h "
+  document.getElementById("countdown").innerHTML = "Countdown 2020: " + days + "d " + hours + "h "
   + minutes + "m " + seconds + "s ";
     
   if (difference < 0) {
@@ -21,6 +28,9 @@ var interval = setInterval(function() {
     document.getElementById("countdown").innerHTML = "EXPIRED";
   }
 }, 1000);
+
+//countdown end
+
 $(document).ready(function()
 {
     init()
@@ -43,7 +53,6 @@ $(document).ready(function()
           $( ".inner-switch" ).text( "ON" );
         }
     });
-
 
     function init()
     {
