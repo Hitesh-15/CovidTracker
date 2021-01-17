@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Covid Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -16,14 +17,15 @@
             <span class="inner-switch">OFF</span>
         </div>
 
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand text-center" href="#"><h1>Covid Data</h1></a>
+        <nav class="navbar navbar-expand-lg navbar-light" style="text-align: right;">
+            <a class="navbar-brand" href="#"><h1>Covid Data</h1></a>
         </nav>
         
-        <div class="p-3 my-3 border">
-            <table class = "table table-hover text-center">
+        <div class="container-fluid p-3 my-3 border">
+            
+            <table class = "table table-hover scoreboardTable"> <h4>Global Data</h4>
                 <thread>
-                <tr>
+                <tr class="scoreboardTableHeaderRow">
                     <th>Total cases</th>
                     <th>Total Deaths</th>
                     <th>Total Recovered</th>
@@ -35,18 +37,18 @@
                 </tbody>
             </table>
         </div>
-        <div class="p-3 my-3 border">
-            <table class = "table table-hover text-center">
+        <div class="container-fluid p-3 my-3 border">
+            <table class = "table table-hover text-center scoreboardTable">
                 <thread>
-                <tr>
+                <tr class="scoreboardTableHeaderRow">
                     <th>Country</th>
                     <th>Total Cases</th>
-                    <th id="red">Total Deaths</th>
+                    <th>Total Deaths</th>
                     <th>Total Recovered</th>
                 </tr>
                 </thread>
                 <tbody>
-                    <tr id="countrydata">
+                    <tr id="countrydata" class="scoreboardTableHeaderRow">
                         <th id="countryvalue"></th>
                         <th id="totalvalue"></th>
                         <th id="deathvalue"></th>
@@ -62,7 +64,7 @@
                        <a href="mailto:hitesh@ambulkar.com"><e class="fa fa-envelope-o" ></e></a>
                        <a href="https://www.linkedin.com/in/hitesh-ambulkar/" target="_blank"><l class="fa fa-linkedin"></l></a>
                        <a href="https://twitter.com/hitesh_a" target="_blank"><t class="fa fa-twitter"></t></a>
-<!--                        <a href="https://www.facebook.com/hitesh.ambulkar" target="_blank"><f class="fa fa-facebook"></f></a> -->
+<!--                   <a href="https://www.facebook.com/hitesh.ambulkar" target="_blank"><f class="fa fa-facebook"></f></a> -->
                        <a href="https://www.instagram.com/hitesh.ambulkar/" target="_blank"><i class="fa fa-instagram"></i></a>
                        <!--<a href="https://cloud.ambulkar.com" target="_blank"><c class="fa fa-cloud"></c></a>-->
                    </div>

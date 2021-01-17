@@ -86,3 +86,23 @@ p {
     justify-content: center;
     -webkit-font-smoothing: antialiased;
 }
+
+.scoreboardTable tr td {
+    height: 25px;
+}
+.scoreboardTable {
+    padding: 0;margin: auto;
+    border-collapse: collapse;
+    width: 80%;
+    text-align: center;
+    color: whitesmoke;
+}
+.scoreboardTableHeaderRow {
+    color: rgb(138, 20, 255);
+    font-weight: bold;
+    height: 50px;
+}
+
+/* .scoreboardTableBodyRow:hover{
+    background-color: rgb(228, 211, 24);
+} */

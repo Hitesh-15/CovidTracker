@@ -3,26 +3,21 @@
 
 var countDownDateTime = new Date("Dec 31, 2021 23:59:59").getTime();
 
-var interval = setInterval(function() {
-
+var interval = setInterval(function() 
+{
   var nowTime = new Date().getTime();
-    
   var difference = countDownDateTime - nowTime;
-
   const second = 1000,
         minute = second * 60,
         hour = minute * 60,
         day = hour * 24;
 
-    
   var days = Math.floor(difference / (day));
   var hours = Math.floor((difference % day) / (hour));
   var minutes = Math.floor((difference % (hour)) / (minute));
   var seconds = Math.floor((difference % (minute)) / second);
-    
   document.getElementById("countdown").innerHTML = "Countdown 2021: " + days + "d " + hours + "h "
   + minutes + "m " + seconds + "s ";
-    
   if (difference < 0) {
     clearInterval(interval);
     document.getElementById("countdown").innerHTML = "EXPIRED";
@@ -57,13 +52,13 @@ $(document).ready(function()
     function init()
     {
         var url="https://api.covid19api.com/summary"
-        var data='';
+        // var data='';
         $.get(url, function(data)
         {
             var i,j;
             var output=new Array()
             
-            let highestnumber
+            // let highestnumber
             for(i=0;i<186;i++)
             {
                 output[i]=data.Countries[i].TotalConfirmed;
@@ -84,10 +79,10 @@ $(document).ready(function()
                         HighestCountryByConfirmed[i]=data.Countries[j].TotalConfirmed;
                         HighestCountryByDeath[i]=data.Countries[j].TotalDeaths;
                         HighestCountryByRecovered[i]=data.Countries[j].TotalRecovered;
-                        $("#countryvalue").append('<table class = "table table-hover text-center"><tr><th>'+HighestCountryByTotal[i]+'</th></tr></table>')
-                        $("#totalvalue").append('<table class = "table table-hover text-center"><tr><th>'+HighestCountryByConfirmed[i]+'</th></tr></table>')
-                        $("#deathvalue").append('<table class = "table table-hover text-center"><tr><th>'+HighestCountryByDeath[i]+'</th></tr></table>')
-                        $("#recoveredvalue").append('<table class = "table table-hover text-center"><tr><th>'+HighestCountryByRecovered[i]+'</th></tr></table>')
+                        $("#countryvalue").append('<table class = "table text-center"><tr><th>'+HighestCountryByTotal[i]+'</th></tr></table>')
+                        $("#totalvalue").append('<table class = "table text-center"><tr><th>'+HighestCountryByConfirmed[i]+'</th></tr></table>')
+                        $("#deathvalue").append('<table class = "table text-center"><tr><th>'+HighestCountryByDeath[i]+'</th></tr></table>')
+                        $("#recoveredvalue").append('<table class = "table text-center"><tr><th>'+HighestCountryByRecovered[i]+'</th></tr></table>')
                     }
                 }
             } 
@@ -100,4 +95,4 @@ $(document).ready(function()
             $("#totaldata").html(totaldata)
         })
     }
-})
+});
