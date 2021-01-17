@@ -1,7 +1,7 @@
 
 //countdown start
 
-var countDownDateTime = new Date("Dec 31, 2020 23:59:59").getTime();
+var countDownDateTime = new Date("Dec 31, 2021 23:59:59").getTime();
 
 var interval = setInterval(function() {
 
@@ -20,7 +20,7 @@ var interval = setInterval(function() {
   var minutes = Math.floor((difference % (hour)) / (minute));
   var seconds = Math.floor((difference % (minute)) / second);
     
-  document.getElementById("countdown").innerHTML = "Countdown 2020: " + days + "d " + hours + "h "
+  document.getElementById("countdown").innerHTML = "Countdown 2021: " + days + "d " + hours + "h "
   + minutes + "m " + seconds + "s ";
     
   if (difference < 0) {
