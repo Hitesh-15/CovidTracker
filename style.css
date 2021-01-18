@@ -74,7 +74,6 @@ body{
 }
 
 p {
-    /* background-color: black; */
     background: #7f7fd5;
     background: -webkit-linear-gradient(to right, #7f7fd5, #86a8e7, #91eae4);
     background: linear-gradient(to right, #7f7fd5, #86a8e7, #91eae4);
@@ -91,18 +90,15 @@ p {
     height: 25px;
 }
 .scoreboardTable {
-    padding: 0;margin: auto;
+    padding: 0;
+    margin: auto;
     border-collapse: collapse;
     width: 80%;
     text-align: center;
-    color: whitesmoke;
 }
 .scoreboardTableHeaderRow {
-    color: rgb(138, 20, 255);
+    color: rgb(44, 110, 235);
     font-weight: bold;
     height: 50px;
 }
 
-/* .scoreboardTableBodyRow:hover{
-    background-color: rgb(228, 211, 24);
-} */
