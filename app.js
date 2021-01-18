@@ -40,12 +40,12 @@ $(document).ready(function()
         if( $( "body" ).hasClass( "dark" )) 
         {
           $( "body" ).removeClass( "dark" );
-          $( ".inner-switch" ).text( "Dark" );
+          $( ".inner-switch" ).text("");
         } 
         else 
         {
           $( "body" ).addClass( "dark" );
-          $( ".inner-switch" ).text( "Light" );
+          $( ".inner-switch" ).text("");
         }
     });
 
