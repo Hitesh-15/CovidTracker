@@ -1,4 +1,5 @@
-# CovidTracker displays statistics of Covid19.
+# CovidTracker
+An application which pulls data from covid tracker API and show statistics to the user.
 
 Data is provided by: https://covid19api.com/
 
