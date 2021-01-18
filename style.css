@@ -62,7 +62,7 @@ body{
     border-radius: 50%;
   }
 
-.dark,input:checked + .slider ,
+.dark,
 .dark * {
     background-color: #222;
     color: #e6e6e6;
